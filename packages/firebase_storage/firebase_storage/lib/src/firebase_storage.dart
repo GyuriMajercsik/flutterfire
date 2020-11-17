@@ -189,6 +189,24 @@ class FirebaseStorage extends FirebasePluginPlatform {
     return _delegate.setMaxUploadRetryTime(time.inMilliseconds);
   }
 
+  /// upload
+  String uploadFileFromWeb(
+    String folderReference,
+    String fileName,
+    String base64Content,
+  ) {
+    return _delegate.uploadFileFromWeb(
+      folderReference,
+      fileName,
+      base64Content,
+    );
+  }
+
+  /// remove
+  String removeFileFromWeb(String fileUrl) {
+    return _delegate.removeFileFromWeb(fileUrl);
+  }
+
   /// Sets the new maximum upload retry time in milliseconds.
   @Deprecated("Deprecated in favor of setMaxUploadRetryTime()")
   Future<void> setMaxUploadRetryTimeMillis(int time) async {

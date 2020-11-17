@@ -3,10 +3,11 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_storage_platform_interface/firebase_storage_platform_interface.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-import 'package:firebase_storage_platform_interface/firebase_storage_platform_interface.dart';
+
 import '../method_channel/method_channel_firebase_storage.dart';
 
 /// The Firebase Storage platform interface.
@@ -66,6 +67,20 @@ abstract class FirebaseStoragePlatform extends PlatformInterface {
   /// The maximum time to retry operations other than uploads or downloads in milliseconds.
   int get maxOperationRetryTime {
     throw UnimplementedError('get.maxOperationRetryTime is not implemented');
+  }
+
+  /// uploading to web
+  String uploadFileFromWeb(
+    String folderReference,
+    String fileName,
+    String base64Content,
+  ) {
+    throw UnimplementedError('get.maxUploadRetryTime is not implemented');
+  }
+
+  /// removing from firebase storage
+  String removeFileFromWeb(String fileUrl) {
+    throw UnimplementedError('get.maxUploadRetryTime is not implemented');
   }
 
   /// The maximum time to retry uploads in milliseconds.

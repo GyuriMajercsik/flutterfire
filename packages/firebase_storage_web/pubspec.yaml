@@ -1,0 +1,31 @@
+name: firebase_storage_web
+description: The web implementation of firebase_storage
+version: 0.0.1
+
+flutter:
+  plugin:
+    platforms:
+      web:
+        pluginClass: FirebaseStorageWeb
+        fileName: firebase_storage_web.dart
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  firebase: ^7.3.0
+  firebase_core: ^0.5.0
+  firebase_storage_platform_interface:
+    git:
+      url: https://github.com/GyuriMajercsik/flutterfire.git
+      path: packages/firebase_storage/firebase_storage_platform_interface
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+environment:
+  sdk: ">=2.0.0-dev.28.0 <3.0.0"
+  flutter: ">=1.12.13+hotfix.4 <2.0.0"
+
