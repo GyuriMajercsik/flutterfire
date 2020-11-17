@@ -190,7 +190,7 @@ class FirebaseStorage extends FirebasePluginPlatform {
   }
 
   /// upload
-  String uploadFileFromWeb(
+  Future<String> uploadFileFromWeb(
     String folderReference,
     String fileName,
     String base64Content,
@@ -203,7 +203,7 @@ class FirebaseStorage extends FirebasePluginPlatform {
   }
 
   /// remove
-  String removeFileFromWeb(String fileUrl) {
+  Future<String> removeFileFromWeb(String fileUrl) {
     return _delegate.removeFileFromWeb(fileUrl);
   }
 
