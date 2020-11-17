@@ -45,6 +45,20 @@ class FirebaseStorageWeb extends FirebaseStoragePlatform {
     }
   }
 
+  @override
+  Future<String> uploadFileFromWeb(
+    String folderReference,
+    String fileName,
+    String base64Content,
+  ) {
+    return _uploadFileFromWeb(folderReference, fileName, base64Content);
+  }
+
+  /// removing from firebase storage
+  Future<String> removeFileFromWeb(String fileUrl) {
+    return _removeFileFromWeb(fileUrl);
+  }
+
   /// returns the uploaded file's Firebase Storage URL
   Future<String> _uploadFileFromWeb(
     String folderReference,

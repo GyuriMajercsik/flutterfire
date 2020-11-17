@@ -70,17 +70,17 @@ abstract class FirebaseStoragePlatform extends PlatformInterface {
   }
 
   /// uploading to web
-  String uploadFileFromWeb(
+  Future<String> uploadFileFromWeb(
     String folderReference,
     String fileName,
     String base64Content,
-  ) {
-    throw UnimplementedError('get.maxUploadRetryTime is not implemented');
+  ) async {
+    throw UnimplementedError('uploadFileFromWeb is not implemented');
   }
 
   /// removing from firebase storage
-  String removeFileFromWeb(String fileUrl) {
-    throw UnimplementedError('get.maxUploadRetryTime is not implemented');
+  Future<String> removeFileFromWeb(String fileUrl) async {
+    throw UnimplementedError('removeFileFromWeb is not implemented');
   }
 
   /// The maximum time to retry uploads in milliseconds.
